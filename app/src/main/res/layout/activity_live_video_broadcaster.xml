@@ -1,0 +1,187 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LiveVideoBroadcasterActivity"
+    android:id="@+id/root_layout">
+
+    <!--
+    <com.google.android.exoplayer.AspectRatioFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        >
+        -->
+    <android.opengl.GLSurfaceView
+        android:id="@+id/cameraPreview_surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="gone"
+        android:layout_gravity="center" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/transparent_cover"
+        android:background="#77000000"/>
+    <!--
+   </com.google.android.exoplayer.AspectRatioFrameLayout>
+    -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:onClick="showSetResolutionDialog"
+            android:src="@drawable/ic_settings_white_24dp"
+            style="?borderlessButtonStyle"
+            android:visibility="gone"
+            />
+
+
+
+        <TextView
+            android:id="@+id/stream_live_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_live"
+            android:padding="5dp"
+            android:text="Live"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="1"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            android:visibility="gone"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/changeCameraButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:onClick="changeCamera"
+            android:src="@drawable/ic_switch_camera_white_24dp"
+            />
+
+        <ImageButton
+            android:id="@+id/livestop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:onClick="showSetResolutionDialog"
+            android:src="@drawable/ic_close_black_24dp"
+            style="?borderlessButtonStyle"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/gifimage"
+            android:layout_width="96dp"
+            android:layout_height="94dp"
+            android:layout_gravity="right"
+            android:src="@drawable/kakaorion"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/giftext"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="별풍선 메세지"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/livechatlist"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="gone">
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/livechatmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="채팅 메세지"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:theme="@style/EditTheme"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보내기"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccentpuple"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/stream_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="방송제목"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:theme="@style/EditTheme"/>
+        <Button
+            android:id="@+id/toggle_broadcasting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:textColor="@android:color/white"
+            android:text="방송 시작하기"
+            android:layout_gravity="center_horizontal"
+            android:onClick="toggleBroadcasting"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:backgroundTint="@color/colorAccentpuple"
+            />
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

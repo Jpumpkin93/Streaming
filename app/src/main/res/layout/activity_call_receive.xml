@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CallReceiveActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/caller_image"
+        android:padding="10dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/caller_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="callerid"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화가 왔습니다..."
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/call_ok"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_green_light"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_call_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/call_cancel"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/holo_red_light"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_call_end_black_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/call_ok"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/snackbar"
+    tools:context=".Activity.Profile_EditActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:padding="10dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/imageedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진 변경"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="#1E90FF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textSize="15dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:inputType="text"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소개"
+        android:textSize="15dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="소개를 작성해주세요."
+        android:textSize="15dp"
+        android:inputType="text"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이메일"
+        android:textSize="15dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="이메일을 작성해주세요."
+        android:textSize="15dp"
+        android:inputType="text"/>
+
+
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorAccentpuple"
+        android:text="수정"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

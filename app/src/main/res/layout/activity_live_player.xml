@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.LivePlayerActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="4dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/black">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/userimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="2dp"/>
+
+            <TextView
+                android:id="@+id/usernickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usernickname"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/livetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="livetitle"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/stream_live_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_live"
+                android:padding="5dp"
+                android:text="Live"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="1"
+                android:textSize="15dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/black"/>
+
+            <ImageButton
+                android:id="@+id/livestop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_close_black_24dp"
+                android:layout_gravity="right"
+                style="?borderlessButtonStyle"/>
+        </LinearLayout>
+
+
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/simple_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="false">
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/gifimage"
+            android:layout_width="96dp"
+            android:layout_height="94dp"
+            android:src="@drawable/kakaorion"
+            android:layout_gravity="right"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/giftext"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="별풍선 내용"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/livechatlist"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/gift"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="선물"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccentpuple"/>
+
+            <EditText
+                android:id="@+id/livechatmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="채팅 메세지"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:theme="@style/EditTheme"/>
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보내기"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccentpuple"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+</LinearLayout>

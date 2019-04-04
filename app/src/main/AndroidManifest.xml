@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ju.streaming">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".Kakao.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_play_circle_filled_black_24dp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyActionbar">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.SignUpActivity" />
+        <activity android:name=".Activity.ChatActivity" />
+        <activity android:name=".Activity.Profile_EditActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.ju.streaming.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Activity.ChatListActivity" />
+        <activity android:name=".Activity.UserListActivity" />
+
+        <service
+            android:name=".Service.MySocketService"
+            android:stopWithTask="true" />
+
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+
+        <activity
+            android:name=".WebRTC.CallActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="fullUser"
+            android:theme="@style/CallActivityTheme" />
+        <activity
+            android:name=".WebRTC.ConnectActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="appr.tc"
+                    android:scheme="https" />
+                <data
+                    android:host="appr.tc"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.CallSendActivity" />
+        <activity android:name=".Activity.CallReceiveActivity" />
+        <activity android:name=".Activity.LiveActivity" />
+        <activity android:name=".Activity.HotActivity" />
+        <activity android:name=".Activity.SubscriptionActivity" />
+        <activity android:name=".Activity.LiveVideoBroadcasterActivity" />
+
+        <service android:name=".liveVideoBroadcasterSDK.LiveVideoBroadcaster" />
+
+        <activity android:name=".Activity.LivePlayerActivity" />
+        <activity android:name=".Activity.VideoPlusActivity" />
+        <activity android:name=".Activity.VideoPlayerActivity" />
+        <activity android:name=".Activity.ChannelActivity" />
+        <activity android:name=".Activity.NewsActivity" />
+        <activity android:name=".Activity.MyItemActivity"></activity>
+        <activity android:name=".Activity.PayActivity">
+
+            <!-- 웹뷰 및 ISP 등의 어플 인증후 앱으로 다시 호출하기 위한 스키마 설정 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="iamporttest" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.ZxingActivity"></activity>
+
+        <activity android:name=".Activity.UnityPlayerActivity" android:screenOrientation="fullSensor" android:launchMode="singleTask" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density" android:hardwareAccelerated="false" />
+
+        <meta-data android:name="unity.build-id" android:value="7c0aa962-122b-4637-aaba-b0d3e25fc23c" />
+        <meta-data android:name="unity.splash-mode" android:value="0" />
+        <meta-data android:name="unity.splash-enable" android:value="True" />
+    </application>
+
+</manifest>

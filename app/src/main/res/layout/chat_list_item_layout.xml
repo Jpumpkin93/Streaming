@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:id="@+id/panel">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/youimage"
+        android:padding="10dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffffff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/younickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="chatlisttitle"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/lastmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="chatlistmessage"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hit"
+            android:textSize="10dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/holo_red_light"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

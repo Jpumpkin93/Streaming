@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CallSendActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/receiver_image"
+        android:padding="10dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/receiver_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="receiverid"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요청 중입니다..."
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+
+
+    <ImageButton
+        android:id="@+id/call_end"
+        android:layout_marginTop="150dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_call_end_black_24dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/holo_red_light"
+        android:layout_gravity="center"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MyItemActivity"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/star2"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보유중인 별풍선"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/coincount"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="코인 구매"
+        android:textColor="@android:color/black"
+        android:background="@color/colorGray"/>
+
+    <!--코인 구매-->
+
+    <Button
+        android:id="@+id/coinbuy10"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="10개    →    1,100원"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccentpuple"/>
+
+    <Button
+        android:id="@+id/coinbuy50"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="50개    →    5,500원"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccentpuple"/>
+
+    <Button
+        android:id="@+id/coinbuy100"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="100개    →    11,000원"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccentpuple"/>
+
+    <Button
+        android:id="@+id/qrcode"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="쿠폰 등록"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccentpuple"/>
+
+
+
+</LinearLayout>

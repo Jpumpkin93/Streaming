@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.VideoPlayerActivity">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:resize_mode="fill"/>
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/playeruserimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp"/>
+
+        <TextView
+            android:id="@+id/playernickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="usernickname"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:id="@+id/subscriptionno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_play_circle_filled_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="구독하기"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccentpuple"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:id="@+id/subscriptionyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_play_circle_filled_black_24dp"
+                android:tint="@color/colorGray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="구독 중"
+                android:layout_gravity="center"
+                android:drawableTint="@color/colorGray"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGray">
+    </View>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGray">
+    </View>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="content"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

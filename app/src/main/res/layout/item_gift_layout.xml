@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/star2"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/havestar"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보유중인 별풍선"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/coincount"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/giftcoincount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:hint="선물할 개수"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/sendcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선물"
+        android:layout_gravity="center"
+        android:background="@color/colorAccentpuple"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

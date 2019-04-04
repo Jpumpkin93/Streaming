@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/panel">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="실시간"
+            android:background="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/broadcasterimage"
+            android:padding="10dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ffffff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="방송 제목"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/broadcasternickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="방송자 닉네임"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
