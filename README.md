@@ -58,6 +58,9 @@
 ## 주요기능
 
 ### 소셜 로그인
+
+    <img src="/images/kakaoLogin.gif" width = 250> 
+
 ### 동영상 업로드
 ### 결제
 ### 구독
