@@ -1,4 +1,4 @@
-# Streaming(동영상 플랫폼 어플)
+# Streaming
 
 사용자들 간 동영상을 공유하고, 방송을 통하여 소통 할 수 있는 어플
 
@@ -62,36 +62,42 @@
 
 
 
-### -소셜 로그인(카카오, 페이스북)
+### - 소셜 로그인(카카오, 페이스북)
 
-<img src="/images/kakaoLogin.gif" width = 250> <img src="/images/kakaoLogin.gif" width = 250>
+<img src="/images/kakaoLogin.gif" width = 250> <img src="/images/facebookLogin.gif" width = 250>
 
-### -동영상 업로드
+### - 동영상 업로드
 
 <img src="/images/upload.gif" width = 250>
 
-### -결제
+### - 결제
 
 <img src="/images/payment.gif" width = 250>
 
-### -구독
+### - 구독
 
 <img src="/images/subscribe.gif" width = 250>
 
-### -채팅, 영상통화
+### - 채팅, 영상통화
 
-<img src="/images/Chat.gif" width = 250>
+<img src="/images/Chat.gif">
 
-### -방송
+### - 방송
 
  - 방송 시작, 선물, 채팅
 
-    <img src="/images/broadcast.gif" width = 250>
+    <img src="/images/broadcast.gif">
 
  - 방송 다시보기
 
-    <img src="/images/replay.gif" width = 250>
+    <img src="/images/replay.gif">
  
-### -웹 크롤링
+### - 웹 크롤링
 
 <img src="/images/webCrawling.gif" width = 250>
+
+
+
+## 참고사항
+
+- 개인 프로젝트로 8주동안 진행하였습니다.
